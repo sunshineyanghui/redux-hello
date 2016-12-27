@@ -10,10 +10,14 @@ class CommentBox extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     let val = this.refs.val.value;
+    let comments = this.state.comments;
+    comments.push(val)
     console.log(val);
     this.setState({
-      comments:this.state.comments.concat(val)
+      // comments:[...this.state.comments,val]
+      comments:comments
     })
+    this.refs.commentFrom.reset()
   }
   render(){
     let commentList = this.state.comments.map((item,i) => (
@@ -24,11 +28,11 @@ class CommentBox extends React.Component{
         <ul>
           {commentList}
         </ul>
-        <form onSubmit={this.handleSubmit.bind(this)} className="comment-form">
+        <form ref="commentFrom" onSubmit={this.handleSubmit.bind(this)} className="comment-form">
           <input type="text" ref="val" className="input" />
           <button className="submit">提交</button>
         </form>
-        
+
       </div>
     )
   }
