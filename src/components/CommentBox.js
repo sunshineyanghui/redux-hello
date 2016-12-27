@@ -1,22 +1,24 @@
 import React from 'react';
-
+import store from '../store';
 class CommentBox extends React.Component{
   constructor(){
     super();
     this.state={
-      comments:['yanghui:滴水穿石非一日之功','yoko:邂逅最美的那片海']
+      // comments:['yanghui:滴水穿石非一日之功','yoko:邂逅最美的那片海']
+      comments:store.getState()
     }
   }
   handleSubmit(e){
     e.preventDefault();
-    let val = this.refs.val.value;
-    let comments = this.state.comments;
-    comments.push(val)
-    console.log(val);
-    this.setState({
-      // comments:[...this.state.comments,val]
-      comments:comments
-    })
+    // let val = this.refs.val.value;
+    // let comments = this.state.comments;
+    // comments.push(val)
+    // console.log(val);
+    // this.setState({
+    //   // comments:[...this.state.comments,val]
+    //   comments:comments
+    // })
+    
     this.refs.commentFrom.reset()
   }
   render(){
