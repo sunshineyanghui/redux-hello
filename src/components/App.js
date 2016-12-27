@@ -6,8 +6,13 @@ class App extends React.Component {
 
     return(
     <div>
-      <PostBody/>
-      <CommentBox/>
+      <div className="top clearfix">
+        <PostBody/>
+      </div>
+      <div className="bottom clearfix">
+        <CommentBox/>
+      </div>
+
     </div>
     )
   }

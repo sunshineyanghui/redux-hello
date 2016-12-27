@@ -3,8 +3,10 @@ import React from 'react';
 class PostBody extends React.Component{
   render(){
     return(
-      <div className="postbody">
-        PostBody
+      <div className="post-body">
+        <div className="comment-num">
+          24
+        </div>
       </div>
     )
   }
