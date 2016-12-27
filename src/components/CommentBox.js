@@ -18,8 +18,12 @@ class CommentBox extends React.Component{
     //   // comments:[...this.state.comments,val]
     //   comments:comments
     // })
-    
+
+
+    store.dispatch({type:'ADD_COMMENT',comment:this.refs.val.value})
+    this.setState({comments: store.getState()});
     this.refs.commentFrom.reset()
+
   }
   render(){
     let commentList = this.state.comments.map((item,i) => (
