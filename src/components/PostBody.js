@@ -3,9 +3,6 @@ import { connect } from 'react-redux';
 class PostBody extends React.Component{
   constructor(){
     super();
-    this.state = {
-      num: store.getState().length
-    }
   }
   render(){
     return(

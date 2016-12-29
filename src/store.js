@@ -9,5 +9,5 @@ function commentReducer(state=[],action){
       return state
   }
 }
-let store = createStore(commentReducer,comments);
+const store = createStore(commentReducer,comments);
 export default store;
