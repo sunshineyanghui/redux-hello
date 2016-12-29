@@ -5,7 +5,7 @@ class CommentBox extends React.Component{
     super();
     this.state={
       // comments:['yanghui:滴水穿石非一日之功','yoko:邂逅最美的那片海']
-      comments:store.getState()
+      comments:store.getState().comments
     }
   }
   handleSubmit(e){
@@ -21,7 +21,7 @@ class CommentBox extends React.Component{
 
 
     store.dispatch({type:'ADD_COMMENT',comment:this.refs.val.value})
-    this.setState({comments: store.getState()});
+    this.setState({comments: store.getState().comments});
     this.refs.commentFrom.reset()
 
   }

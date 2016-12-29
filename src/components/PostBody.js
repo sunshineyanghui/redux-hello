@@ -7,6 +7,7 @@ class PostBody extends React.Component{
   render(){
     return(
       <div className="post-body">
+        {this.props.id}
         <div className="comment-num">
           { this.props.comments.length }
         </div>
@@ -15,6 +16,6 @@ class PostBody extends React.Component{
   }
  }
 const mapStateToProps = (state) =>({
-  comments:state
+  comments:state.comments
 });
 export default connect (mapStateToProps)(PostBody);

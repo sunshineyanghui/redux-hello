@@ -1,13 +1,14 @@
 import { createStore } from 'redux';
+import rootReducer from './reducers';
 let comments = ['yanghui:滴水穿石非一日之功','yoko:邂逅最美的那片海']
+const posts=[
+  {id:1,title:'redux-hello'},
+  {id:2,title:'redux-baby'}
+]
 
-function commentReducer(state=[],action){
-  switch (action.type) {
-    case 'ADD_COMMENT':
-      return [...state, action.comment]
-    default:
-      return state
-  }
+const defaultState={
+  comments,
+  posts
 }
-const store = createStore(commentReducer,comments);
+const store = createStore(rootReducer,defaultState);
 export default store;

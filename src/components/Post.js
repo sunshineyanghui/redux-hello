@@ -9,8 +9,9 @@ class Post extends React.Component {
     <Provider store={store}>
       <div>
         <div className="top clearfix">
-          <PostBody/>
+          <PostBody id={this.props.params.postId}/>
         </div>
+        {/* {this.props.params.postId} */}
         <div className="bottom clearfix">
           <CommentBox/>
         </div>
