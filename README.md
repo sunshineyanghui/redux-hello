@@ -3,7 +3,7 @@ redux-hello
 ### test.js,num.js为了测试rerender
 
 num.js
-```
+```js
 import React from 'react';
 
 class Num extends React.Component{
@@ -21,7 +21,7 @@ export default Num;
 
 text.js
 
-```
+```js
 import React from 'react';
 import Num from './num'
 class Test extends React.Component{

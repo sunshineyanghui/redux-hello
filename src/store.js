@@ -1,9 +1,12 @@
 import { createStore } from 'redux';
 import rootReducer from './reducers';
-let comments = ['yanghui:滴水穿石非一日之功','yoko:邂逅最美的那片海']
+let comments = {
+  1: ['nice post', 'help me a lot'],
+  2: ['really good', 'save me lots of time']
+}
 const posts=[
-  {id:1,title:'redux-hello'},
-  {id:2,title:'redux-baby'}
+  {id:1,title:'redux-hello',likes:4},
+  {id:2,title:'redux-baby',likes:5}
 ]
 
 const defaultState={

@@ -9,7 +9,7 @@ class PostBody extends React.Component{
       <div className="post-body">
         {this.props.id}
         <div className="comment-num">
-          { this.props.comments.length }
+          { this.props.comments[this.props.id].length }
         </div>
       </div>
     )

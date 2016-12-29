@@ -13,7 +13,7 @@ class Post extends React.Component {
         </div>
         {/* {this.props.params.postId} */}
         <div className="bottom clearfix">
-          <CommentBox/>
+          <CommentBox postId={this.props.params.postId}/>
         </div>
       </div>
     </Provider>
